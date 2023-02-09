@@ -8,7 +8,7 @@ from app.utils import Utils
 app = create_app()
 try:
     cv_data = Utils.parse_data_json_file()
-except (AttributeError, JSONDecodeError) as exc:
+except (AttributeError, JSONDecodeError, KeyError) as exc:
     print("Exiting...")
     sys.exit(1)
 
